@@ -30,10 +30,10 @@ const Container = styled.div`
     
   }
   .partnerdis {
-   
+    margin-top: 15vh;
   }
   .titles {
-    
+    margin-top: 15vh;
   }
 `;
 export default Home;

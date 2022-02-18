@@ -62,16 +62,17 @@ const TextBox = styled.div`
     }
   }
   button {
-    width: 40%;
-    height: 15%;
+    width: 15vw;
+    height: 4vw;
     background-color: orange;
     border-radius: 0.7vw;
-    font-size: 100%;
+    font-size: 2vw;
 
-    @media(max-width:768px){
+    @media (max-width: 768px) {
       width: 25vw;
       text-align: center;
       margin: 1vh auto;
+      font-size: 3vw; 
     }
   }
 `;
