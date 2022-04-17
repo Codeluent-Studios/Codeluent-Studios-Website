@@ -47,7 +47,7 @@ const Games = () => {
             <p>You will surely manage. Won't you?</p>
           </div><div className="play-btn">
               <a href="https://play.google.com/store/apps/details?id=com.Codeluent.IndusBuilder">
-              <img src="/images/res/play-btn.png" alt="google play link" />
+              <img src="/images/res/play-btn.png" alt="google play link indus" />
               </a>
           </div>
         </Game>
@@ -78,7 +78,7 @@ const Games = () => {
           </div>
           <div className="play-btn">
               <a href="https://play.google.com/store/apps/details?id=com.CodeluentStudios.IdleOfficeTime">
-              <img src="/images/res/play-btn.png" alt="google play link" />
+              <img src="/images/res/play-btn.png" alt="google play link idle office" />
               </a>
           </div>
         </Game>
