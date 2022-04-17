@@ -12,7 +12,7 @@ const Home = () => {
           <VideoDisplay />
         </div>
         <div className="partnerdis">
-          <PartnerDisplay />
+            <PartnerDisplay />
         </div>
         <div className="titles">
           <Titles />
@@ -23,11 +23,10 @@ const Home = () => {
 };
 
 const Container = styled.div`
-  display:flex;
+  display: flex;
   justify-content: space-between;
   flex-direction: column;
   .vid {
-    
   }
   .partnerdis {
     margin-top: 15vh;

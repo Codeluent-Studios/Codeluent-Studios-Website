@@ -6,7 +6,7 @@ const VideoDisplay = () => {
     <>
       <Container>
         <video autoPlay loop muted>
-          <source src="/videos/home-video.mp4" type="video/mp4" />
+          <source src="/videos/intro-vid.mp4" type="video/mp4" />
         </video>
       </Container>
     </>
@@ -19,14 +19,18 @@ const Container = styled.div`
   align-items: center;
   justify-items: center;
   video {
-    opacity: 0.5;
+    opacity: 0.85;
     height: 80vh;
     max-width: 100%;
-    :hover {
-      opacity: 0.8;
-    }
+    
     @media(max-width:862px){
         /* width: 100%; */
+        height: 100%;
+    }
+
+    @media(min-width:1240px){
+       
+        /* width: 100vw; */
         height: 100%;
     }
   }

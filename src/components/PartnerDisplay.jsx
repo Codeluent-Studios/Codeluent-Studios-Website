@@ -6,16 +6,18 @@ const PartnerDisplay = () => {
     <>
       <Container>
         <Collage>
-          <img src="/images/game-collage.jpg" alt="" />
+          <img src="/images/res/about2.png" alt="" />
         </Collage>
         <TextBox>
-          <h1>YOUR PARTNERS IN PRODUCTION</h1>
+          <h1>ABOUT US</h1>
           <p>
-            Providing engineering, QA, and management services for video game
-            companies. We're engine agnostic, and can handle full SKU
-            development, DLC, and porting to all major platforms.
+            Codeluent Studios is a fun-loving game studio where we all members
+            like to make quality games that users can enjoy and also pass their
+            time comfortably with it. We also love to play games that resonate
+            with us. We have a very nice community who are always looking to
+            help.
           </p>
-          <button>Learn More</button>
+        
         </TextBox>
       </Container>
     </>
@@ -25,10 +27,11 @@ const PartnerDisplay = () => {
 const Container = styled.div`
   display: grid;
   grid-template-columns: 1fr 3fr 2vw 3fr 1fr;
-  @media(max-width:768px){
+  @media (max-width: 768px) {
     margin: 0 10vw;
-      display: flex;
-      flex-direction: column;
+    display: flex;
+    flex-direction: column;
+    word-wrap: break-word;
   }
 `;
 
@@ -43,11 +46,12 @@ const TextBox = styled.div`
   grid-column: 4/5;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-evenly;
 
   h1 {
     font-size: 2.5vw;
-    @media(max-width:768px){
+
+    @media (max-width: 768px) {
       font-size: 4vw;
       text-align: center;
       margin-top: 5vh;
@@ -56,7 +60,7 @@ const TextBox = styled.div`
   p {
     font-size: 1.7vw;
 
-    @media(max-width:768px){
+    @media (max-width: 768px) {
       margin-top: 1.5vh;
       font-size: 3.2vw;
     }
@@ -72,7 +76,7 @@ const TextBox = styled.div`
       width: 25vw;
       text-align: center;
       margin: 1vh auto;
-      font-size: 3vw; 
+      font-size: 3vw;
     }
   }
 `;

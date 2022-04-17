@@ -3,9 +3,8 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Rubik', sans-serif;
-  color: rgb(255, 255, 255);
   scroll-behavior: smooth;
 }
 body{
-  background-color: rgb(5, 5, 49);
+  background-color: rgb(227, 227, 231);
 }

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { GiHamburgerMenu } from "react-icons/gi";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [show, setShow] = useState(false);
@@ -14,23 +15,26 @@ const Navbar = () => {
       <Nav>
         <NavRow>
           <Logo>
-            <img src="/images/logo.png" alt="logo..." />
+            <Link to="/">
+              <img src="/images/res/nav-logo.png" alt="logo..." />
+            </Link>
+            <span>CODELUENT STUDIOS</span>
           </Logo>
           <RightMenu>
             <div>
-              Home
+              <Link  className="nav-link" to="/">Home</Link>
               <div className="bar"></div>
             </div>
             <div>
-              Games
+              <Link  className="nav-link" to="/games">Games</Link>
               <div className="bar"></div>
             </div>
             <div>
-              Write us
+              <Link  className="nav-link" to="/contact">Contact</Link>
               <div className="bar"></div>
             </div>
             <div>
-              About us
+              <Link className="nav-link"  to="/privacy">Privacy Policy</Link>
               <div className="bar"></div>
             </div>
           </RightMenu>
@@ -40,17 +44,17 @@ const Navbar = () => {
         </NavRow>
         {show ? (
           <Menu className="show-menu">
-            <div>Home</div>
-            <div>Games</div>
-            <div>Write Us</div>
-            <div>About Us</div>
+            <div><Link to="/" className="nav-link">Home</Link></div>
+            <div><Link to="/games" className="nav-link">Games</Link></div>
+            <div><Link to="/contact" className="nav-link">Contact</Link></div>
+            <div><Link to="/privacy" className="nav-link">Privacy Policy</Link></div>
           </Menu>
         ) : (
           <Menu>
-            <div>Home</div>
-            <div>Games</div>
-            <div>Write Us</div>
-            <div>About Us</div>
+            <div><Link to="/" className="nav-link">Home</Link></div>
+            <div><Link to="/games" className="nav-link">Games</Link></div>
+            <div><Link to="/contact" className="nav-link">Contact</Link></div>
+            <div><Link to="/privacy" className="nav-link">Privacy Policy</Link></div>
           </Menu>
         )}
       </Nav>
@@ -58,9 +62,13 @@ const Navbar = () => {
   );
 };
 const Nav = styled.nav`
-  background-color: #06011dcc;
+  background-color: #055c9d;
   grid-template-rows: 1fr 1fr;
   z-index: 99;
+  .nav-link{
+    text-decoration: none;
+    color: white;
+  }
 `;
 
 const NavRow = styled.div`
@@ -68,12 +76,12 @@ const NavRow = styled.div`
   height: 7vh;
 
   display: grid;
-  grid-template-columns: 1fr 2fr 2fr 1fr;
+  grid-template-columns: 0.5fr 2fr 2fr 1fr;
   justify-content: space-between;
 
   @media (max-width: 862px) {
-    grid-template-columns: 1fr 1fr 2fr 1fr;
-    font-size: 1.5vh;
+    grid-template-columns: 0.6fr 1fr 2fr 1fr;
+    font-size: 1vh;
   }
 `;
 const Logo = styled.div`
@@ -83,12 +91,19 @@ const Logo = styled.div`
   grid-column: 2/3;
 
   img {
-    opacity: 0.7;
+    opacity: 1;
     height: 5vh;
     cursor: pointer;
   }
-  img:hover {
-    opacity: 1;
+
+  span {
+    margin-left: 1rem;
+    color: white;
+    cursor: pointer;
+    
+    @media(max-width:860px){
+     font-size: 0.65rem;
+    }
   }
 `;
 const RightMenu = styled.div`
@@ -97,6 +112,8 @@ const RightMenu = styled.div`
   justify-content: space-between;
   align-items: center;
   grid-template-columns: repeat(4, 1fr);
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  color: white;
 
   div {
     font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
@@ -106,7 +123,7 @@ const RightMenu = styled.div`
     cursor: pointer;
 
     @media (max-width: 862px) {
-      font-size: 1.5vh;
+      font-size: 1rem;
     }
   }
   .bar {
@@ -125,9 +142,11 @@ const RightMenu = styled.div`
     display: none;
     height: 0;
   }
+
+  
 `;
 const HamButton = styled.div`
-  background-color: #06011dcc;
+  background-color: #68bbe3;
   display: none;
   @media (max-width: 600px) {
     display: flex;
@@ -143,7 +162,8 @@ const HamButton = styled.div`
 `;
 
 const Menu = styled.div`
-  background-color: #080125a0;
+  color: white;
+  background-color: #055c9d;
   position: relative;
   width: 100vw;
   grid-row: 2/3;
@@ -151,20 +171,20 @@ const Menu = styled.div`
   display: none;
   top: -21vh;
   grid-template-rows: 1fr 1fr 1fr 1fr 1rem;
-  height: 21vh;
+  height: 29vh;
   transition: all 2s linear;
   opacity: 0;
   div {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     margin-left: 3rem;
     margin-bottom: 1em;
-  } 
+    padding-top: 1rem;
+  }
 
   &.show-menu {
     display: grid;
     top: 0;
     opacity: 1;
-    
   }
 `;
 

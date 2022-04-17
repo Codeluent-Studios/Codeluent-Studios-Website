@@ -1,22 +1,23 @@
 import React from "react";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 const Titles = () => {
   return (
     <>
       <Container>
         <TextBox>
-          <h1>ORIGINAL TITLES</h1>
+          <h1>INDUS BUILDER</h1>
           <p>
-            Skymap creates original IP, as well as partners with developers to
-            realize the full potential of projects. We have full self-publishing
-            capability, development resources, and a deep network of
-            professionals ready to make something great.
+            Experience the 1800 BCE period as it comes to life right in front of
+            you. Feel like a king and act like one. Take decisions that will
+            make your people happy and keep them content. People are the base of
+            any civilization don't disappoint them or they will leave.
           </p>
-          <button>Learn More</button>
+          <button><Link className="btn-link" to="/games">Learn More</Link></button>
         </TextBox>
         <Collage>
-          <img src="/images/titles.png" alt="" />
+          <img src="/images/res/titles2.png" alt="" />
         </Collage>
       </Container>
     </>
@@ -25,7 +26,7 @@ const Titles = () => {
 const Container = styled.div`
   display: grid;
   grid-template-columns: 1fr 3fr 2vw 3fr 1fr;
-
+  background-color: #d7dae0;
   @media (max-width: 768px) {
     margin: 0 10vw;
     display: flex;
@@ -36,6 +37,7 @@ const Container = styled.div`
 const Collage = styled.div`
   grid-column: 4/5;
   img {
+    padding: 1.5rem 0px;
     width: 100%;
   }
 `;
@@ -44,7 +46,7 @@ const TextBox = styled.div`
   grid-column: 2/3;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-evenly;
 
   h1 {
     font-size: 2.5vw;
@@ -69,11 +71,16 @@ const TextBox = styled.div`
     border-radius: 0.7vw;
     font-size: 2vw;
 
+    .btn-link{
+      text-decoration: none;
+      color: black;
+    }
+
     @media (max-width: 768px) {
       width: 25vw;
       text-align: center;
       margin: 1vh auto;
-      font-size: 3vw; 
+      font-size: 3vw;
     }
   }
 `;
