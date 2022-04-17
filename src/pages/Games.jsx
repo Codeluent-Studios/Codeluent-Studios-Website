@@ -10,7 +10,7 @@ const Games = () => {
         <Game>
           <h2>Indus Builder</h2>
           <div className="game-img">
-            <img src="/images/res/game-indus.jpg" alt="image" />
+            <img src="/images/res/game-indus.jpg" alt="indus builder" />
           </div>
           <div className="game-text">
             <p>
@@ -54,7 +54,7 @@ const Games = () => {
         <Game>
           <h2>Idle Office Time</h2>
           <div className="game-img">
-            <img src="/images/res/game-office.jpg" alt="IdleImage" />
+            <img src="/images/res/game-office.jpg" alt="Idle Office Time" />
           </div>
           <div className="game-text">
             <p>Business is war and it's never personal </p>
